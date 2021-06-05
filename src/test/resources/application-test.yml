@@ -1,4 +1,22 @@
+micronaut:
+  application:
+    name: carrosGrpc
+
+# Substitui banco de testes
 datasources:
   default:
-    url: jdbc:tc:postgresql:12:///postgres
-    driverClassName: org.testcontainers.jdbc.ContainerDatabaseDriver
+    url: jdbc:h2:mem:default;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password: ""
+    driverClassName: org.h2.Driver
+
+
+#
+#jpa:
+#  default:
+#    properties:
+#      hibernate:
+#        hbm2ddl:
+#          auto: update
+#        show_sql: true
+#        format_sql: true

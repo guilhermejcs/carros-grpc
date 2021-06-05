@@ -3,10 +3,17 @@ micronaut:
     name: carrosGrpc
 datasources:
   default:
-    url: jdbc:postgresql://localhost:5432/postgres
+    url: jdbc:postgresql://localhost:5432/cdc
     driverClassName: org.postgresql.Driver
     username: postgres
-    password: ''
-    schema-generate: CREATE_DROP
+    password: Zup@2206
     dialect: POSTGRES
-jpa.default.properties.hibernate.hbm2ddl.auto: update
+
+jpa:
+  default:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        show_sql: true
+        format_sql: true
